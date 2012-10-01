@@ -11,7 +11,12 @@
 		: "=r"(x) \
 		: "r"(useless) \
 		: "%esp"); \
-	printf("Stack pointer is equal to: %d\n", x);
+	printf("Stack pointer is equal to: %d\n", x); \
+	__asm__("movl %%ebp, %0" \
+		: "=r"(x) \
+		: "r"(useless) \
+		: "%ebp"); \
+	printf("Stack base pointer is equal to: %d\n", x);
 
 int facto(int a) {
 	printf("&a=%d\n", (int)&a);
