@@ -1,3 +1,3 @@
 all:
-	gcc -c -m32 main.c
-	gcc -o execute_me main.o libhw.a -m32 
+	gcc -c -m32 main.c ctx_list.c semaphore.c
+	gcc -o execute_me main.o ctx_list.o semaphore.o libhw.a -m32 
