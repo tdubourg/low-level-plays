@@ -1,3 +1,3 @@
 #!/bin/bash
 
-gcc -fomit-frame-pointer -o $1 $1.c
+gcc -m32 -g -o $1 $1.c

@@ -18,18 +18,7 @@
 		: "%ebp"); \
 	printf("Stack base pointer is equal to: %d\n", x);
 
-int facto(int a) {
-	printf("&a=%d\n", (int)&a);
-	p();
-	volatile int b = a-1;
-	if (!a)
-	{
-		return 1;
-	} else {
-		return a*facto(b);
-	}
-}
-
+#include "facto.c" // Ugly include
 
 int main(int argc, char const *argv[])
 {
